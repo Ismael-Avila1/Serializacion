@@ -12,3 +12,21 @@ void cBlindado::imprimir() {
 
     std::cout << "\tNivel de blindaje: " << blindaje << std::endl;
 }
+
+void cBlindado::Salvar(std::fstream &out) {
+    motor.Salvar(out);
+    out << modelo << std::endl;
+    out << sirena << std::endl;
+    out << blindaje << std::endl;
+}
+
+void cBlindado::Cargar(std::fstream &in) {
+    motor.Cargar(in);
+    in >> modelo;
+    in >> sirena;
+    in >> blindaje;
+}
+
+int cBlindado::GetCLSID() {
+    return CLSID_BLINDADO;
+}

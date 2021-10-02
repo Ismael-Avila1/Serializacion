@@ -10,3 +10,19 @@ void cPatrulla::imprimir() {
 
     std::cout << "\tLa sirena esta " << ((sirena == true) ? "encendida" : "apagada") << std::endl;
 }
+
+void cPatrulla::Salvar(std::fstream &out) {
+    motor.Salvar(out);
+    out << modelo << std::endl;
+    out << sirena << std::endl;
+}
+
+void cPatrulla::Cargar(std::fstream &in) {
+    motor.Cargar(in);
+    in >> modelo;
+    in >> sirena;
+}
+
+int cPatrulla::GetCLSID() {
+    return CLSID_PATRULLA;
+}

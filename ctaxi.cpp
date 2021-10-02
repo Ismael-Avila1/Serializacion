@@ -10,3 +10,18 @@ void cTaxi::imprimir() {
 
     std::cout << "\tTaxi del sitio: " << sitio << std::endl;
 }
+
+void cTaxi::Salvar(std::fstream &out) {
+    out << GetCLSID() << std::endl;
+    motor.Salvar(out);
+    out << sitio << std::endl;
+}
+
+void cTaxi::Cargar(std::fstream &in) {
+    motor.Cargar(in);
+    in >> sitio;
+}
+
+int cTaxi::GetCLSID() {
+    return CLSID_TAXI;
+}

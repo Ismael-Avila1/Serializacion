@@ -8,3 +8,18 @@ void cAuto::imprimir() {
     std::cout <<"\tDatos del motor." << std::endl;
     motor.imprimir();
 }
+
+void cAuto::Salvar(std::fstream &out) {
+    out << GetCLSID() << std::endl;
+    motor.Salvar(out);
+    out << modelo << std::endl;
+}
+
+void cAuto::Cargar(std::fstream &in) {
+    motor.Cargar(in);
+    in >> modelo;
+}
+
+int cAuto::GetCLSID() {
+    return CLSID_AUTO;
+}
