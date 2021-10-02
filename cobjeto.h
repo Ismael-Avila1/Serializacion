@@ -1,8 +1,9 @@
 #ifndef COBJETO_H
 #define COBJETO_H
 
+#include "cserializable.h"
 
-class cObjeto {
+class cObjeto : public cSerializable {
 public:
     cObjeto();
 
