@@ -2,11 +2,25 @@
 #define CLISTA_H
 
 #include <iostream>
+
 #include "cnodo.h"
 #include "citerador.h"
 #include "creverseiterador.h"
 
-class cLista {
+#include "cpersona.h"
+#include "calumno.h"
+#include "cmaestro.h"
+#include "cauto.h"
+#include "cpatrulla.h"
+#include "ctaxi.h"
+#include "cblindado.h"
+#include "cautoparte.h"
+#include "cmotor.h"
+#include "cllanta.h"
+
+#define CLSID_LISTA 1000
+
+class cLista : public cObjeto {
 private:
     cNodo inicio;
     cNodo final;
@@ -32,13 +46,17 @@ public:
     bool isEmpty();
     bool isFull();
 
-    void imprimir();
+    void imprimir() override;
 
     cIterador& begin();
     cIterador& end();
 
     cReverseIterador& rBegin();
     cReverseIterador& rEnd();
+
+    void Salvar(std::fstream& out) override;
+    void Cargar(std::fstream& in) override;
+    int GetCLSID() override;
 };
 
 #endif // CLISTA_H

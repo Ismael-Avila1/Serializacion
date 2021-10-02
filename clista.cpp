@@ -91,4 +91,76 @@ cReverseIterador &cLista::rEnd() {
     return r_itEnd;
 }
 
+void cLista::Salvar(std::fstream &out) {
+    out << GetCLSID() << std::endl;
+    out << size() << std::endl;
 
+    cIterador it;
+
+    for(it=this->begin(); it!=this->end(); it++)
+        it.pActual->obj->Salvar(out);
+}
+
+void cLista::Cargar(std::fstream &in) {
+    int lstSize;
+    in >> lstSize;
+
+    for(int i=0; i<=lstSize; i++) {
+        int CLSID = 0;
+        in >> CLSID;
+
+        cObjeto* pObj = nullptr;
+
+        switch (CLSID) {
+        case CLSID_PERSONA:
+            pObj = new cPersona;
+            break;
+
+        case CLSID_ALUMNO:
+            pObj = new cAlumno;
+            break;
+
+        case CLSID_MAESTRO:
+            pObj = new cMaestro;
+            break;
+
+        case CLSID_AUTO:
+            pObj = new cAuto;
+            break;
+
+        case CLSID_PATRULLA:
+            pObj = new cPatrulla;
+            break;
+
+        case CLSID_TAXI:
+            pObj = new cTaxi;
+            break;
+
+        case CLSID_BLINDADO:
+            pObj = new cBlindado;
+            break;
+
+        case CLSID_AUTOPARTE:
+            pObj = new cAutoparte;
+            break;
+
+        case CLSID_MOTOR:
+            pObj = new cMotor;
+            break;
+
+        case CLSID_LLANTA:
+            pObj = new cLlanta;
+            break;
+
+        default:
+            pObj = nullptr;
+        }
+
+        pObj->Cargar(in);
+        insertarAlFinal(pObj);
+    }
+}
+
+int cLista::GetCLSID() {
+    return CLSID_LISTA;
+}
