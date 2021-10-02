@@ -1,5 +1,7 @@
 #include "cmotor.h"
 
+cMotor::cMotor() : cAutoparte() {}
+
 cMotor::cMotor(int s, int n) : cAutoparte(s), numCilindros(n) {}
 
 void cMotor::imprimir() {

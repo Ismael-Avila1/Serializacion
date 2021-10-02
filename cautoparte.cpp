@@ -1,5 +1,7 @@
 #include "cautoparte.h"
 
+cAutoparte::cAutoparte() : cObjeto() {}
+
 cAutoparte::cAutoparte(int s) : cObjeto(), serie(s) {}
 
 void cAutoparte::imprimir() {

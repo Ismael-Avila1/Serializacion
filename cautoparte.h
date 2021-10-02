@@ -12,6 +12,7 @@ protected:
     int serie;
 
 public:
+    cAutoparte();
     cAutoparte(int s);
     void imprimir() override;
 

@@ -10,6 +10,7 @@ private:
     int codigo;
 
 public:
+    cAlumno();
     cAlumno(std::string n, int c);
     void imprimir() override;
 

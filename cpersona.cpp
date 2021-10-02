@@ -1,5 +1,7 @@
 #include "cpersona.h"
 
+cPersona::cPersona() : cObjeto() {}
+
 cPersona::cPersona(std::string nombre) : cObjeto(), nombre(nombre) {}
 
 void cPersona::imprimir() {

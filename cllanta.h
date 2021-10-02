@@ -10,6 +10,7 @@ private:
     int rodado;
 
 public:
+    cLlanta();
     cLlanta(int s, int r);
     void imprimir() override;
 

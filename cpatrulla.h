@@ -10,6 +10,7 @@ protected:
     bool sirena;
 
 public:
+    cPatrulla();
     cPatrulla(int sm, int nc, int m, bool s);
     void imprimir() override;
 

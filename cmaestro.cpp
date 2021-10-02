@@ -1,5 +1,7 @@
 #include "cmaestro.h"
 
+cMaestro::cMaestro() : cPersona() {}
+
 cMaestro::cMaestro(std::string n, int c) : cPersona(n), codigo(c) {}
 
 void cMaestro::imprimir() {

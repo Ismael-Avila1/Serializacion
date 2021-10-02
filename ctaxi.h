@@ -9,6 +9,7 @@ class cTaxi : public cAuto {
 private:
     int sitio;
 public:
+    cTaxi();
     cTaxi(int sm, int nc, int m, int s);
     void imprimir() override;
 

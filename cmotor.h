@@ -10,6 +10,7 @@ private:
     int numCilindros;
 
 public:
+    cMotor();
     cMotor(int s, int n);
     void imprimir() override;
 

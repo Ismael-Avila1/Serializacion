@@ -13,6 +13,7 @@ protected:
     std::string nombre;
 
 public:
+    cPersona();
     cPersona(std::string nombre);
     void imprimir() override;
 

@@ -1,5 +1,7 @@
 #include "cauto.h"
 
+cAuto::cAuto() : cObjeto() {}
+
 cAuto::cAuto(int sm, int nc, int m) : motor(sm, nc), modelo(m) {}
 
 void cAuto::imprimir() {

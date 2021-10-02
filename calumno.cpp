@@ -1,5 +1,7 @@
 #include "calumno.h"
 
+cAlumno::cAlumno() : cPersona() {}
+
 cAlumno::cAlumno(std::string n, int c) : cPersona(n), codigo(c) {}
 
 void cAlumno::imprimir() {

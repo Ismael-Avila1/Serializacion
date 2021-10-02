@@ -14,6 +14,7 @@ protected:
     int modelo;
 
 public:
+    cAuto();
     cAuto(int sm, int nc, int m);
     void imprimir() override;
 

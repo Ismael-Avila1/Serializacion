@@ -1,5 +1,7 @@
 #include "cblindado.h"
 
+cBlindado::cBlindado() : cPatrulla() {}
+
 cBlindado::cBlindado(int sm, int nc, int m, bool s, int b) : cPatrulla(sm, nc, m, s), blindaje(b) {}
 
 void cBlindado::imprimir() {

@@ -1,5 +1,7 @@
 #include "cllanta.h"
 
+cLlanta::cLlanta() : cAutoparte() {}
+
 cLlanta::cLlanta(int s, int r) : cAutoparte(s), rodado(r) {}
 
 void cLlanta::imprimir() {

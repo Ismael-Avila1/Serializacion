@@ -1,5 +1,7 @@
 #include "cpatrulla.h"
 
+cPatrulla::cPatrulla() : cAuto() {}
+
 cPatrulla::cPatrulla(int sm, int nc, int m, bool s) : cAuto(sm, nc, m), sirena(s) {}
 
 void cPatrulla::imprimir() {

@@ -10,6 +10,7 @@ private:
     int codigo;
 
 public:
+    cMaestro();
     cMaestro(std::string n, int c);
     void imprimir() override;
 

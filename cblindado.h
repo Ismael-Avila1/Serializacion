@@ -8,7 +8,9 @@
 class cBlindado : public cPatrulla {
 private:
     int blindaje;
+
 public:
+    cBlindado();
     cBlindado(int sm, int nc, int m, bool s, int b);
     void imprimir() override;
 

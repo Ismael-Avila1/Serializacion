@@ -1,5 +1,7 @@
 #include "ctaxi.h"
 
+cTaxi::cTaxi() : cAuto() {}
+
 cTaxi::cTaxi(int sm, int nc, int m, int s) : cAuto(sm, nc, m), sitio(s) {}
 
 void cTaxi::imprimir() {
