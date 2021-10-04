@@ -105,7 +105,7 @@ void cLista::Cargar(std::fstream &in) {
     int lstSize;
     in >> lstSize;
 
-    for(int i=0; i<=lstSize; i++) {
+    for(int i=0; i<lstSize; i++) {
         int CLSID = 0;
         in >> CLSID;
 
