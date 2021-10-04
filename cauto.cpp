@@ -18,6 +18,8 @@ void cAuto::Salvar(std::fstream &out) {
 }
 
 void cAuto::Cargar(std::fstream &in) {
+    int CLSIDmotor;
+    in >> CLSIDmotor;
     motor.Cargar(in);
     in >> modelo;
 }

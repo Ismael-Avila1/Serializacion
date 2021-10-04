@@ -14,12 +14,15 @@ void cPatrulla::imprimir() {
 }
 
 void cPatrulla::Salvar(std::fstream &out) {
+    out << GetCLSID() << std::endl;
     motor.Salvar(out);
     out << modelo << std::endl;
     out << sirena << std::endl;
 }
 
 void cPatrulla::Cargar(std::fstream &in) {
+    int CLSIDmotor;
+    in >> CLSIDmotor;
     motor.Cargar(in);
     in >> modelo;
     in >> sirena;

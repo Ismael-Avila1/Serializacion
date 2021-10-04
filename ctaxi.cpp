@@ -20,6 +20,8 @@ void cTaxi::Salvar(std::fstream &out) {
 }
 
 void cTaxi::Cargar(std::fstream &in) {
+    int CLSIDmotor;
+    in >> CLSIDmotor;
     motor.Cargar(in);
     in >> sitio;
 }
