@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 
 #include "clista.h"
 
@@ -15,7 +16,7 @@ using namespace std;
 
 int main()
 {
-    cLista lst;
+    cLista lst, L2;
 
     // Creando objetos a insertar
 
@@ -41,23 +42,39 @@ int main()
     cLlanta* llanta2 = new cLlanta(90124502, 24);
 
     lst.insertarAlFinal(alumno1);
-    lst.insertarAlFinal(maestro1);
-    lst.insertarAlFinal(patrulla1);
-    lst.insertarAlFinal(blindado1);
-    lst.insertarAlFinal(taxi1);
-    lst.insertarAlFinal(motor1);
-    lst.insertarAlFinal(llanta1);
-
     lst.insertarAlFinal(alumno2);
+    lst.insertarAlFinal(maestro1);
     lst.insertarAlFinal(maestro2);
+    lst.insertarAlFinal(patrulla1);
     lst.insertarAlFinal(patrulla2);
+    lst.insertarAlFinal(blindado1);
     lst.insertarAlFinal(blindado2);
+    lst.insertarAlFinal(taxi1);
     lst.insertarAlFinal(taxi2);
+    lst.insertarAlFinal(motor1);
     lst.insertarAlFinal(motor2);
+    lst.insertarAlFinal(llanta1);
     lst.insertarAlFinal(llanta2);
 
-    cout << "imprimiendo lista" << endl << endl;
-    lst.imprimir();
+
+    //lst.imprimir();
+
+    //Salvando contenido de la lista
+    fstream salida("content.txt", ios_base::out);
+    lst.Salvar(salida);
+    salida.close();
+
+    //Cargando archivo en otra lista
+    fstream entrada("content.txt", ios_base::in);
+    int CLSID = 0;
+    entrada >> CLSID;
+
+    L2.Cargar(entrada);
+    entrada.close();
+
+
+    cout << "imprimiendo lista L2" << endl << endl;
+    L2.imprimir();
 
     delete alumno1;
     delete alumno2;
