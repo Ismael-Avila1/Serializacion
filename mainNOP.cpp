@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 #include <fstream>
 
@@ -42,18 +43,19 @@ int main()
     cLlanta* llanta2 = new cLlanta(90124502, 24);
 
     lst.insertarAlFinal(alumno1);
-    lst.insertarAlFinal(alumno2);
     lst.insertarAlFinal(maestro1);
-    lst.insertarAlFinal(maestro2);
     lst.insertarAlFinal(patrulla1);
-    lst.insertarAlFinal(patrulla2);
     lst.insertarAlFinal(blindado1);
-    lst.insertarAlFinal(blindado2);
     lst.insertarAlFinal(taxi1);
-    lst.insertarAlFinal(taxi2);
     lst.insertarAlFinal(motor1);
-    lst.insertarAlFinal(motor2);
     lst.insertarAlFinal(llanta1);
+
+    lst.insertarAlFinal(alumno2);
+    lst.insertarAlFinal(maestro2);
+    lst.insertarAlFinal(patrulla2);
+    lst.insertarAlFinal(blindado2);
+    lst.insertarAlFinal(taxi2);
+    lst.insertarAlFinal(motor2);
     lst.insertarAlFinal(llanta2);
 
 
@@ -99,3 +101,4 @@ int main()
 
     return 0;
 }
+*/
